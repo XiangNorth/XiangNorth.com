@@ -34,6 +34,8 @@ jobs:
           git clone -b blog "https://${{ secrets.GH_REF }}" deploy_git
           mv ./deploy_git/.git ./public/
           cd ./public
+          git config user.name "XiangNorth"
+          git config user.email "i@xiangnorth.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
+          git push --force --quiet "https://XiangNorth:${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
