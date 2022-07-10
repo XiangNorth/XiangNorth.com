@@ -116,7 +116,7 @@ profile:
   email: i@xiangnorth.com
 
   # You can set Avatar URL directly
-  avatar: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com/images/profile.webp
+  avatar: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com@blog/images/profile.webp
 
   bio: ✨ Coding with Love, Exploring the World.
 
@@ -237,7 +237,7 @@ search:
 # `![cat](images/cat.gif)` will convert to
 # <img src="https://cdn.example.com/images/cat.gif?m=webp&q=80" alt="cat">
 assets:
-  prefix: "//cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com"
+  prefix: "//cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com@blog"
   # suffix: '?m=webp&q=80'
 
 # Table of content, enabled by default, set to `false` to disable.
@@ -259,11 +259,11 @@ reward:
   # use `name` to apply
   methods:
     - name: wechat
-      qrcode: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com/images/wechat.webp
+      qrcode: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com@blog/images/wechat.webp
       text: This is a Wechat payment QR Code
       color: "#22ab39"
     - name: alipay
-      qrcode: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com/images/alipay.webp
+      qrcode: //cdn.jsdelivr.net/gh/XiangNorth/XiangNorth.com@blog/images/alipay.webp
       url: https://qr.alipay.com/fkx18627zev7uryl2ezqccf
       text: This is a Alipay payment link
       color: "#1678ff"
