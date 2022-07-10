@@ -324,7 +324,7 @@ favicon:
 # SEO
 seo:
   # Render structured-data in <head>, default to `false`
-  # structured_data: true
+  structured_data: true
   # Server-side rendering (SSR), default to `false`
   # ssr: true
 
