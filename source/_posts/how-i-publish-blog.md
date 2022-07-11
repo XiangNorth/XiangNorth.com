@@ -68,7 +68,7 @@ date: 2022-07-11 23:32:02
 
 在这里，主要是介绍 [GitHub Actions](https://github.com/features/actions) 在部署我的博客中的使用，**不会**涉及 Hexo 怎么配置，怎么上传到。
 
-{% codeblock main.yml lang:yaml https://github.com/XiangNorth/XiangNorth.com/blob/main/.github/workflows/main.yml workflows/main.yml %}
+{% codeblock main.yml lang:yaml https://github.com/XiangNorth/XiangNorth.com/blob/main/.github/workflows/main.yml workflows/main.yml %}{% raw %}
 name: Blog CI/CD
 
 on: [push, repository_dispatch]
@@ -91,7 +91,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}`-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
         run: |
@@ -110,19 +110,17 @@ jobs:
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://XiangNorth:${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
-{% endcodeblock %}
+{% endraw %}{% endcodeblock %}
 
 为了方便并「优雅」地部署，我使用了 `secrets.GITHUB_TOKEN` 来代替 GitHub 的 API Token，你可以在 [这篇文档](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) 了解更多。
 
 原理是就是简单的，当「push」，或者手动触发——即「dispatch」——时，就会触发这个 CI/CD 进程：
 
 ::: timeline
-
 - 检查并配置环境
 - 运行 `hexo generate`
 - 将生成的 `public` 目录通过自动生成的 `secrets.GITHUB_TOKEN` push 到 `blog` 分支
 - 这时 Vercel 就会监听到并自动将该分支最新内容进行部署
-
 :::
 
 ### Editing
