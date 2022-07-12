@@ -272,7 +272,7 @@ reward:
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Type of copyright
-  license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow " target= "_blank">CC BY-NC-ND 4.0</a>
+  license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target= "_blank">CC BY-NC-ND 4.0</a>
 
   # Display author, default to `true`
   author: false
