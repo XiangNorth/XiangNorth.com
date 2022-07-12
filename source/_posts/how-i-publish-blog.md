@@ -11,10 +11,10 @@ tags:
   - Blog
   - Vercel
   - GitHub Actions
-thumbnail: 'https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/VfTLVg.jpg #111'
+thumbnail: "https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/VfTLVg.jpg #111"
 sticky: 0
 date: 2022-07-11 23:32:02
-description: 'Everything about Hi, XiangNorth!'
+description: "Everything about Hi, XiangNorth!"
 ---
 
 ## Prologue
@@ -23,7 +23,7 @@ description: 'Everything about Hi, XiangNorth!'
 
 在 2014 年，我在 [Lofter](https://lofter.com/) 开始了一段时间的博客写作生活，也成为了上面的首批用户。
 
-![Lofter](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/TKtK6U.png)
+![Lofter](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/TKtK6U.png)
 
 有幸被 [Wayback Manchine](https://web.archive.org/web/20190315110511/http://yishuabear.lofter.com/) 收录了一张快照。
 
@@ -33,7 +33,7 @@ description: 'Everything about Hi, XiangNorth!'
 
 ### WordPress
 
-![WordPress](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/tSsLNN.png)
+![WordPress](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/tSsLNN.png)
 
 大名鼎鼎的 [WordPress](https://wordpress.com/)，是我**第一个**个人网站的框架。
 
@@ -47,7 +47,7 @@ description: 'Everything about Hi, XiangNorth!'
 
 ### Hexo
 
-![Hexo](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/W0LtZ0.png)
+![Hexo](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/W0LtZ0.png)
 
 最后归宿来到了 [Hexo](https://hexo.io)，是一个非常「简单」的博客框架。
 
@@ -64,7 +64,7 @@ description: 'Everything about Hi, XiangNorth!'
 ### CI/CD
 
 {% blockquote Wikipedia https://zh.wikipedia.org/wiki/CI/CD CI/CD %}
-在软件工程中，CI/CD或CICD通常指的是持续集成和持续交付或持续部署的组合实践。CI/CD通过在应用程序的构建、测试和部署中实施自动化，在开发和运营团队之间架起了桥梁。
+在软件工程中，CI/CD 或 CICD 通常指的是持续集成和持续交付或持续部署的组合实践。CI/CD 通过在应用程序的构建、测试和部署中实施自动化，在开发和运营团队之间架起了桥梁。
 {% endblockquote %}
 
 在这里，主要是介绍 [GitHub Actions](https://github.com/features/actions) 在部署我的博客中的使用，**不会**涉及 Hexo 怎么配置，怎么上传到。
@@ -75,14 +75,13 @@ name: Blog CI/CD
 on: [push, repository_dispatch]
 
 jobs:
-  blog-cicd:
-    name: Hexo blog build & deploy
-    runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Shanghai
-    steps:
-      - name: Checkout codes
-        uses: actions/checkout@v2
+blog-cicd:
+name: Hexo blog build & deploy
+runs-on: ubuntu-latest
+env:
+TZ: Asia/Shanghai
+steps: - name: Checkout codes
+uses: actions/checkout@v2
 
       - name: Setup node
         uses: actions/setup-node@v1
@@ -111,6 +110,7 @@ jobs:
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://XiangNorth:${{ secrets.GITHUB_TOKEN }}@${{ secrets.GH_REF }}" blog:blog
+
 {% endraw %}{% endcodeblock %}
 
 为了方便并「优雅」地部署，我使用了 `secrets.GITHUB_TOKEN` 来代替 GitHub 的 API Token，你可以在 [这篇文档](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) 了解更多。
@@ -118,17 +118,18 @@ jobs:
 原理是就是简单的，当「push」，或者手动触发——即「dispatch」——时，就会触发这个 CI/CD 进程：
 
 ::: timeline
+
 - 检查并配置环境
 - 运行 `hexo generate`
 - 将生成的 `public` 目录通过自动生成的 `secrets.GITHUB_TOKEN` push 到 `blog` 分支
 - 这时 Vercel 就会监听到并自动将该分支最新内容进行部署
-:::
+  :::
 
 ### Editing
 
 #### Words
 
-![VS Code](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/N8Ap28.png)
+![VS Code](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/N8Ap28.png)
 
 得益于 VS Code 强大的拓展性，我可以轻松地在其中进行 Markdown 的写作的同时进行预览。
 
@@ -138,7 +139,7 @@ jobs:
 
 我的博客文章图片的解决方案是「GitHub」+「jsDelivr CDN」，即将图片上传至我的图片专用仓库，然后通过 jsDelivr CDN 加载。
 
-![uPic](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/z5qMXT.png)
+![uPic](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/z5qMXT.png)
 
 我使用的上传工具为「uPic」, 它是一款开源的 macOS 软件，你可以去他的 [GitHub 主页](https://github.com/gee1k/uPic) 开始使用或支持开发者。
 
@@ -159,8 +160,8 @@ jobs:
 
 在平时的阅读中也见过很多大佬或漂亮或优雅的页面，如[「Tobias Ahlin」](https://tobiasahlin.com/blog/)和[「Josh W Comeau」](https://www.joshwcomeau.com/)。
 
-![Tobias Ahlin](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/EOkAE2.png)
+![Tobias Ahlin](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/EOkAE2.png)
 
-![Josh W Comeau](https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/qInlvc.png)
+![Josh W Comeau](https://s-bj-4070-xnor.oss.dogecdn.com/gh/XiangNorth/Living-room-for-Pic@main/2022/07/qInlvc.png)
 
 总之岁月静好，还有很多时间，我们慢慢来。
