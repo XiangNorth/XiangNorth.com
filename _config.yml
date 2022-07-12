@@ -5,8 +5,17 @@
 # Site
 title: Hi, XiangNorth!
 subtitle: ""
-description: "Front-end, Blog, Hexo, Programming, Cute"
+description: "✨ Coding with Love, Exploring the World."
 keywords:
+  - "XiangNorth"
+  - "Blog"
+  - "Coding"
+  - "Cute"
+  - "Hexo"
+  - "Front-End"
+  - "前端"
+  - "博客"
+  - "可爱"
 author: XiangNorth
 language:
   - en
@@ -16,7 +25,7 @@ timezone: "Asia/Shanghai"
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://xiangnorth.com
-permalink: :year-:month/:name
+permalink: :name
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -109,3 +118,6 @@ feed:
   hub:
   order_by: -date
   autodiscovery: true
+
+baidusitemap:
+  path: baidusitemap.xml

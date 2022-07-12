@@ -1,0 +1,15 @@
+User-agent: *
+
+Allow: /
+Allow: /categories/
+Allow: /links/
+Allow: /tags/
+Allow: /archives/
+Allow: /about/
+
+Disallow: /api/
+Disallow: /images/
+Disallow: /404/
+
+Sitemap: https://xiangnorth.com/sitemap.xml
+Sitemap: https://xiangnorth.com/baidusitemap.xml
