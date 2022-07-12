@@ -14,6 +14,7 @@ tags:
 thumbnail: 'https://cdn.jsdelivr.net/gh/XiangNorth/Living-room-for-Pic@main/2022/07/VfTLVg.jpg #111'
 sticky: 0
 date: 2022-07-11 23:32:02
+description: 'Everything about Hi, XiangNorth!'
 ---
 
 ## Prologue

@@ -115,9 +115,11 @@ feed:
   type: atom
   path: atom.xml
   limit: 0
-  hub:
+  content: true
+  hub: https://pubsubhubbub.appspot.com
   order_by: -date
   autodiscovery: true
+  template: ./scaffolds/atom_template.xml
 
 baidusitemap:
   path: baidusitemap.xml
