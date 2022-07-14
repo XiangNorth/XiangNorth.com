@@ -11,7 +11,7 @@ tags:
   - Blog
   - Vercel
   - GitHub Actions
-thumbnail: "https://img.20010711.xyz/2022/07/VfTLVg.jpg #111"
+thumbnail: "https://xiangnorth.com/images/07/VfTLVg.jpg #111"
 sticky: 0
 date: 2022-07-11 23:32:02
 description: "Everything about Hi, XiangNorth!"
@@ -23,7 +23,7 @@ description: "Everything about Hi, XiangNorth!"
 
 在 2014 年，我在 [Lofter](https://lofter.com/) 开始了一段时间的博客写作生活，也成为了上面的首批用户。
 
-![Lofter](https://img.20010711.xyz/2022/07/TKtK6U.png)
+![Lofter](https://xiangnorth.com/images/07/TKtK6U.png)
 
 有幸被 [Wayback Manchine](https://web.archive.org/web/20190315110511/http://yishuabear.lofter.com/) 收录了一张快照。
 
@@ -33,7 +33,7 @@ description: "Everything about Hi, XiangNorth!"
 
 ### WordPress
 
-![WordPress](https://img.20010711.xyz/2022/07/tSsLNN.png)
+![WordPress](https://xiangnorth.com/images/07/tSsLNN.png)
 
 大名鼎鼎的 [WordPress](https://wordpress.com/)，是我**第一个**个人网站的框架。
 
@@ -47,7 +47,7 @@ description: "Everything about Hi, XiangNorth!"
 
 ### Hexo
 
-![Hexo](https://img.20010711.xyz/2022/07/W0LtZ0.png)
+![Hexo](https://xiangnorth.com/images/07/W0LtZ0.png)
 
 最后归宿来到了 [Hexo](https://hexo.io)，是一个非常「简单」的博客框架。
 
@@ -129,7 +129,7 @@ uses: actions/checkout@v2
 
 #### Words
 
-![VS Code](https://img.20010711.xyz/2022/07/N8Ap28.png)
+![VS Code](https://xiangnorth.com/images/07/N8Ap28.png)
 
 得益于 VS Code 强大的拓展性，我可以轻松地在其中进行 Markdown 的写作的同时进行预览。
 
@@ -139,7 +139,7 @@ uses: actions/checkout@v2
 
 我的博客文章图片的解决方案是「GitHub」+「jsDelivr CDN」，即将图片上传至我的图片专用仓库，然后通过 jsDelivr CDN 加载。
 
-![uPic](https://img.20010711.xyz/2022/07/z5qMXT.png)
+![uPic](https://xiangnorth.com/images/07/z5qMXT.png)
 
 我使用的上传工具为「uPic」, 它是一款开源的 macOS 软件，你可以去他的 [GitHub 主页](https://github.com/gee1k/uPic) 开始使用或支持开发者。
 
@@ -160,8 +160,8 @@ uses: actions/checkout@v2
 
 在平时的阅读中也见过很多大佬或漂亮或优雅的页面，如[「Tobias Ahlin」](https://tobiasahlin.com/blog/)和[「Josh W Comeau」](https://www.joshwcomeau.com/)。
 
-![Tobias Ahlin](https://img.20010711.xyz/2022/07/EOkAE2.png)
+![Tobias Ahlin](https://xiangnorth.com/images/07/EOkAE2.png)
 
-![Josh W Comeau](https://img.20010711.xyz/2022/07/qInlvc.png)
+![Josh W Comeau](https://xiangnorth.com/images/07/qInlvc.png)
 
 总之岁月静好，还有很多时间，我们慢慢来。
