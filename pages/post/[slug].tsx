@@ -2,7 +2,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { getPostBySlug, getPostSlugList } from '../api/post';
 import { Container, Spacer, Text } from '@nextui-org/react';
 
-export default function PostItem({ post }) {
+export default function PostItem({ post }: any) {
     return (
         <Container>
             <Text h1>{post.title}</Text>
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
     const post = await getPostBySlug(params.slug);
     return { props: { post } };
 }
