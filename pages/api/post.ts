@@ -7,7 +7,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 const postDirectory = path.join(process.cwd(), 'contents', 'posts');
 
 export function getPostSlugList() {
-    return getPosts().map((post) => post.slug);
+    return getPosts().map((post) => post?.slug);
 }
 
 export function getPosts(){
@@ -27,7 +27,7 @@ export function getPosts(){
       const slug = file.name.replace(/.mdx$/, '');
       return { data, content, slug };
   })
-      .filter((post) => post).sort((a, b) => (dayjs(a.data.date).isBefore(dayjs(b.data.date)) ? 1 : -1));
+      .filter((post) => post).sort((a, b) => (dayjs(a?.data.date).isBefore(dayjs(b?.data.date)) ? 1 : -1));
   return posts
 }
 

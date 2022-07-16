@@ -1,7 +1,7 @@
 import { useTheme, Card, Col, Text } from "@nextui-org/react";
 import Link from "next/link";
 
-export default function Post({ content }) {
+export default function Post({ content }: any) {
     const { theme } = useTheme();
     return (
         <Link href={{

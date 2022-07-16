@@ -2,7 +2,7 @@ import { Grid, Text } from "@nextui-org/react";
 import Main from "../components/Main";
 import { getPosts } from "./api/post";
 
-function Index({ posts }) {
+function Index({ posts }: any) {
   return (
     <div>
       <Grid.Container alignItems="center" direction="column" css={{
