@@ -1,8 +1,6 @@
-import { Container, Grid, Text } from "@nextui-org/react";
-import { useTheme } from "@nextui-org/react";
+import { Grid, Text } from "@nextui-org/react";
 
 export default function Footer() {
-    const { theme } = useTheme();
     return (
         <footer>
             <Grid.Container gap={1} direction="column" css={{

@@ -2,24 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import dayjs from 'dayjs';
-import { serialize } from 'next-mdx-remote/serialize';
 
-const postDirectory = path.join(process.cwd(), 'contents', 'posts');
-
-export function getPostSlugList() {
-    return getPosts().map((post) => post?.slug);
-}
+const postDirectory = path.join(process.cwd(), 'pages', 'post');
 
 export function getPosts(){
-  const postsDirectory = path.join(process.cwd(), 'contents', 'posts');
-  const filenames = fs.readdirSync(postsDirectory, {
+  const filenames = fs.readdirSync(postDirectory, {
       withFileTypes: true,
   });
   const posts = filenames.map((file) => {
       if (!file.name.endsWith('.mdx')) return;
 
       const fileContent = fs.readFileSync(
-          path.join(process.cwd(), 'contents', 'posts', file.name),
+          path.join(postDirectory, file.name),
           'utf-8'
       );
       const { data, content } = matter(fileContent);
@@ -31,15 +25,3 @@ export function getPosts(){
   return posts
 }
 
-export async function getPostBySlug(slug : string) {
-  const postPath = path.join(postDirectory, slug + '.mdx');
-  const fileContent = fs.readFileSync(postPath, 'utf-8');
-  const { data, content } = matter(fileContent);
-  return {
-    title: data.title,
-    date: dayjs(data.date).format('YYYY-MM-DD'),
-    description: data.description,
-    tags: data.tags,
-    content: await serialize(content),
-  };
-}

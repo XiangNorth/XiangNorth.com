@@ -9,7 +9,9 @@ function Index({ posts }: any) {
         my: '10vh',
       }}>
         <Grid>
-          <Text h1>Hi, XiangNorth!</Text>
+          <Text h1 css={{
+            textGradient: '270deg,#8be5ff 0,#c5eec3 32.29%,#f1e495 66.67%,#ffbc76 100%'
+          }}>Hi, XiangNorth!</Text>
         </Grid>
         <Grid>
           <Text>✨ Coding with Love, Exploring the World.</Text>

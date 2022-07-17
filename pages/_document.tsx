@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript,DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { CssBaseline } from '@nextui-org/react';
 
 class MyDocument extends Document {
@@ -15,7 +15,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>{CssBaseline.flush()}</Head>
-        <body>
+        <body style={{
+          wordBreak: 'break-all'
+        }}>
           <Main />
           <NextScript />
         </body>
