@@ -1,10 +1,14 @@
 import { Grid, Text } from "@nextui-org/react";
-import Main from "../components/Main";
-import { getPosts } from "./api/post";
+import Head from "next/head";
+import MainCards from "../components/mainCards";
+import { getPostsSummary } from "./api/post";
 
-function Index({ posts }: any) {
+export default function Index({ posts }: any) {
   return (
     <div>
+      <Head>
+        <title>Hi, XiangNorth!</title>
+      </Head>
       <Grid.Container alignItems="center" direction="column" css={{
         my: '10vh',
       }}>
@@ -17,15 +21,13 @@ function Index({ posts }: any) {
           <Text>✨ Coding with Love, Exploring the World.</Text>
         </Grid>
       </Grid.Container>
-      <Main posts={posts} />
+      <MainCards posts={posts} />
     </div>
   );
 }
 
-export default Index;
-
 export async function getStaticProps() {
-  const posts = getPosts();
+  const posts = getPostsSummary();
   return {
     props: {
       posts,

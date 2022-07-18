@@ -1,15 +1,15 @@
 import type { AppProps } from 'next/app'
 import { Container, NextUIProvider } from '@nextui-org/react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import NavBar from '../components/navBar';
+import FooterText from '../components/footerText';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider>
-      <Navbar />
-      <Container>
+      <NavBar />
+      <Container sm>
         <Component {...pageProps} />
-        <Footer />
+        <FooterText />
       </Container>
     </NextUIProvider>
   );

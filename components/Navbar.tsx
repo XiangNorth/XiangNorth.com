@@ -1,18 +1,18 @@
 import { useTheme, Avatar, Grid, Text, Container } from "@nextui-org/react";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function NavBar() {
     const { theme } = useTheme();
     return (
         <nav style={{
             position: "sticky",
             top: 0,
-            padding: '10px',
+            padding: '15px',
             margin: '0',
             zIndex: 1,
             backgroundColor: '#fff',
         }}>
-            <Container>
+            <Container sm>
                 <Grid.Container wrap="nowrap" justify="space-between">
                     <Grid>
                         <Grid.Container gap={2} justify='space-between'>

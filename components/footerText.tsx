@@ -1,6 +1,6 @@
 import { Grid, Text } from "@nextui-org/react";
 
-export default function Footer() {
+export default function FooterText() {
     return (
         <footer>
             <Grid.Container gap={1} direction="column" css={{

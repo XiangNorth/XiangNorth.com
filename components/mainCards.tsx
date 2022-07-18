@@ -1,13 +1,13 @@
 import { Grid } from "@nextui-org/react";
-import PostCard from "./PostCard";
+import PostCard from "./postCard";
 
-export default function Main({ posts }: any) {
+export default function MainCards({ posts }: any) {
     return (
         <Grid.Container gap={2}>
             {posts.map((post: any) => (
                 <Grid xs={12} sm={4} key={post.slug}>
                     <PostCard
-                        content={post} />
+                        post={post} />
                 </Grid>
             ))}
         </Grid.Container>
